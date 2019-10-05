@@ -4,19 +4,27 @@ set modelines=0         " CVE-2007-2438
 " remove change the following statements
 set nocompatible        " Use Vim defaults instead of 100% vi compatibility
 set backspace=2         " more powerful backspacing
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set ruler
+set ruler tabstop=2 expandtab shiftwidth=2
 
 " FZF configuration"
 nnoremap <C-t> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
 
+" RustFmt configuration"
+noremap <C-y> :RustFmt<Cr>
+
+" ocp-indent configuration for OCaml"
+set rtp +="/Users/z0ltan/Software/ocp-indent-vim"
+
+" colorscheme and syntax configuration"
+colo default 
 syntax on
 filetype plugin indent on
 set autoindent
 set smartindent
+set clipboard=unnamed
+set termguicolors
+set colorcolumn = 120 highlight ColorColumn ctermbg=darkgray
 
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
@@ -25,13 +33,14 @@ au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
 au BufWrite *: Autoformat
 
+" Save and load folds"
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-syntax on
-
-set tabstop=2 expandtab shiftwidth=2
 
 let g:sql_type_default = 'pgsql'
 let g:formatdef_rustfmt = '"rustfmt"'
@@ -66,14 +75,19 @@ augroup filetype_clojurescript
    autocmd FileType clojurescript call InsertNamespace()
 augroup END
 
-" Zig lang config
+"Zig configuration
 let g:zig_fmt_autosave = 1
 let g:zig_fmt_command = ['zig', 'fmt', '--color', 'off']
 
-" Vim Plug configuration
+"C configuration
+augroup project
+  autocmd!
+  autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+augroup END
+
+"Vim Plug configuration
 call plug#begin('~/.vim/plugged')
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 call plug#end()
-
