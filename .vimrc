@@ -24,7 +24,6 @@ set autoindent
 set smartindent
 set clipboard=unnamed
 set termguicolors
-set colorcolumn = 120 highlight ColorColumn ctermbg=darkgray
 
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
