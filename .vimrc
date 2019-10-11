@@ -5,6 +5,7 @@ set modelines=0         " CVE-2007-2438
 set nocompatible        " Use Vim defaults instead of 100% vi compatibility
 set backspace=2         " more powerful backspacing
 set ruler tabstop=2 expandtab shiftwidth=2
+set nofixendofline
 
 " FZF configuration"
 nnoremap <C-t> :Files<Cr>
