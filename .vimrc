@@ -17,7 +17,7 @@ nnoremap <C-g> :Rg<Cr>
 set rtp +="/Users/z0ltan/Software/ocp-indent-vim"
 
 " colorscheme and syntax configuration"
-colo default 
+colo desert
 syntax on
 filetype plugin indent on
 set autoindent
@@ -79,15 +79,12 @@ ino <M-g> <esc>:call JumpToDef()<cr>i
 call plug#begin('~/.vim/plugged')
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'slashmili/alchemist.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'ervandew/supertab'
 Plug 'racer-rust/vim-racer'
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'idris-hackers/idris-vim'
 Plug 'lifepillar/pgsql.vim'
 Plug 'ziglang/zig.vim'
 Plug 'elixir-editors/vim-elixir'
-Plug 'itchyny/vim-haskell-indent'
+Plug 'ervandew/supertab'
 call plug#end()
