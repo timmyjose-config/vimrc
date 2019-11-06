@@ -1,4 +1,5 @@
 set fileencodings=utf-8
+set encoding=utf-8
 set modelines=0         " CVE-2007-2438
 
 " Normally we use vim-extensions. If you want true vi-compatibility
