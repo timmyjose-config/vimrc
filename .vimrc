@@ -14,9 +14,6 @@ set nofixendofline
 nnoremap <C-t> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
 
-" ocp-indent configuration for OCaml"
-set rtp +="/Users/z0ltan/Software/ocp-indent-vim"
-
 " colorscheme and syntax configuration"
 colo desert
 syntax on
@@ -54,20 +51,6 @@ let g:racer_cmd = "/home/user/.cargo/bin/racer"
 set hidden
 let g:racer_cmd = 'racer'
 
-" Idris configuration
-let g:idris_indent_if=4
-let g:idris_indent_case=4
-let g:idris_indent_let=4
-let g:idris_indent_where=4
-let g:idris_indent_do=4
-let g:idris_indent_rewrite=4
-
-" C configuration
-augroup project
-  autocmd!
-  autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
-augroup END
-
 " pgsql configuration
 let g:sql_type_default = 'pgsql'
 
@@ -75,17 +58,13 @@ let g:sql_type_default = 'pgsql'
 nn <M-g> :call JumpToDef()<cr>
 ino <M-g> <esc>:call JumpToDef()<cr>i
 
-"
 "Vim Plug configuration
 call plug#begin('~/.vim/plugged')
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'slashmili/alchemist.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'racer-rust/vim-racer'
-Plug 'idris-hackers/idris-vim'
 Plug 'lifepillar/pgsql.vim'
 Plug 'ziglang/zig.vim'
-Plug 'elixir-editors/vim-elixir'
 Plug 'ervandew/supertab'
 call plug#end()
