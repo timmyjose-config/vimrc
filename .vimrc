@@ -18,7 +18,7 @@ nnoremap <C-g> :Rg<Cr>
 nnoremap <C-y> :call RustFormat()<Cr>
 
 function! RustFormat()
-  :silent !rustfmt --force %
+  :silent !rustfmt %
   :redraw!
   :e
 endfunction
