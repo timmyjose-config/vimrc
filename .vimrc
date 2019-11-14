@@ -43,6 +43,9 @@ au BufWrite *: Autoformat
 let g:zig_fmt_autosave = 1
 let g:zig_fmt_command = ['zig', 'fmt', '--color', 'off']
 
+" Haskell configuration
+let g:haskell_classic_highlighting = 1
+
 " pgsql configuration
 let g:sql_type_default = 'pgsql'
 
@@ -58,4 +61,5 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lifepillar/pgsql.vim'
 Plug 'ziglang/zig.vim'
 Plug 'ervandew/supertab'
+Plug 'neovimhaskell/haskell-vim'
 call plug#end()
