@@ -62,4 +62,5 @@ Plug 'lifepillar/pgsql.vim'
 Plug 'ziglang/zig.vim'
 Plug 'ervandew/supertab'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'purescript-contrib/purescript-vim'
 call plug#end()
