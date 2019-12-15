@@ -10,6 +10,16 @@ set ruler tabstop=2 expandtab shiftwidth=2
 set noendofline
 set nofixendofline
 
+" visual selections and smart highlighting
+vnoremap <silent> * :call VisualSelection('f')<Cr>
+vnoremap <silent> # :call VisualSelection('b')<Cr>
+
+"" better switching between splits
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+
 " FZF and Ripgrep configuration"
 nnoremap <C-t> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
