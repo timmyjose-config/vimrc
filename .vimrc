@@ -25,10 +25,19 @@ nnoremap <C-t> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
 
 " mapping for rustfmt
-nnoremap <C-y> :call RustFormat()<Cr>
+nnoremap <C-y> :call MyCustomFormat()<Cr>
 
-function! RustFormat()
-  :silent !rustfmt %
+function! MyCustomFormat()
+  let extension = expand('%:e')
+  
+  if match(extension, '.rs')
+    :silent !rustfmt %
+  else if match(extension, '.hs')
+    :silent !brittany --write-mode=inplace %
+  else 
+    echoerr "Unsupported file type"
+  endif
+
   :redraw!
   :e
 endfunction
