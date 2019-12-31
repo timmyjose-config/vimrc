@@ -1,18 +1,12 @@
 set fileencodings=utf-8
 set encoding=utf-8
-set modelines=0         " CVE-2007-2438
+set modelines=0         
 
-" Normally we use vim-extensions. If you want true vi-compatibility
-" remove change the following statements
-set nocompatible        " Use Vim defaults instead of 100% vi compatibility
-set backspace=2         " more powerful backspacing
+set nocompatible        
+set backspace=2         
 set ruler tabstop=2 expandtab shiftwidth=2
 set noendofline
 set nofixendofline
-
-" visual selections and smart highlighting
-vnoremap <silent> * :call VisualSelection('f')<Cr>
-vnoremap <silent> # :call VisualSelection('b')<Cr>
 
 "" better switching between splits
 map <C-j> <C-w>j
@@ -23,24 +17,6 @@ map <C-l> <C-w>l
 " FZF and Ripgrep configuration"
 nnoremap <C-t> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
-
-" mapping for rustfmt
-nnoremap <C-y> :call MyCustomFormat()<Cr>
-
-function! MyCustomFormat()
-  let extension = expand('%:e')
-  
-  if match(extension, '.rs')
-    :silent !rustfmt %
-  else if match(extension, '.hs')
-    :silent !brittany --write-mode=inplace %
-  else 
-    echoerr "Unsupported file type"
-  endif
-
-  :redraw!
-  :e
-endfunction
 
 " colorscheme and syntax configuration"
 colo desert
