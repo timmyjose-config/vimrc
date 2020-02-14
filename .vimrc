@@ -57,9 +57,7 @@ Plug 'lifepillar/pgsql.vim'
 Plug 'ziglang/zig.vim'
 Plug 'ervandew/supertab'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'purescript-contrib/purescript-vim'
 Plug 'idris-hackers/idris-vim'
-Plug 'vmchale/ats-vim'
 call plug#end()
 
 " for mpc
