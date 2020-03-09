@@ -59,6 +59,7 @@ Plug 'ervandew/supertab'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'idris-hackers/idris-vim'
 Plug 'udalov/kotlin-vim'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " for mpc
