@@ -15,8 +15,8 @@ map <C-h> <C-w>h
 map <C-l> <C-w>l
 
 " FZF and Ripgrep configuration"
-nnoremap <C-t> :Files<Cr>
-nnoremap <C-g> :Rg<Cr>
+nnoremap <Leader>t :FZF<Cr>
+nnoremap <Leader>g :Rg<Cr>
 
 " colorscheme and syntax configuration"
 colo desert
@@ -59,7 +59,7 @@ Plug 'ervandew/supertab'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'idris-hackers/idris-vim'
 Plug 'udalov/kotlin-vim'
-Plug 'purescript-contrib/purescript-vim'
+Plug 'jvoorhis/coq.vim'
 call plug#end()
 
 " for mpc
