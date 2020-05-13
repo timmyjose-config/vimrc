@@ -62,6 +62,3 @@ Plug 'udalov/kotlin-vim'
 Plug 'jvoorhis/coq.vim'
 Plug 'junegunn/vader.vim'
 call plug#end()
-
-" for mpc
-set runtimepath+=/Users/z0ltan/dev/study/viml-primer/mpc
