@@ -60,6 +60,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'idris-hackers/idris-vim'
 Plug 'udalov/kotlin-vim'
 Plug 'jvoorhis/coq.vim'
+Plug 'junegunn/vader.vim'
 call plug#end()
 
 " for mpc
