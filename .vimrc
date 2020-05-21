@@ -14,9 +14,9 @@ map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 
-" FZF and Ripgrep configuration"
+" FZF and Silver Searcher configuration"
 nnoremap <Leader>t :FZF<Cr>
-nnoremap <Leader>g :Rg<Cr>
+nnoremap <Leader>g :Ag<Cr>
 
 " colorscheme and syntax configuration"
 colo desert
