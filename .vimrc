@@ -16,7 +16,7 @@ map <C-l> <C-w>l
 
 "" open new splits to the right and below
 set splitbelow
-set spliright
+set splitright
 
 " FZF and Silver Searcher configuration"
 nnoremap <Leader>t :FZF<Cr>
