@@ -8,7 +8,11 @@ set ruler tabstop=2 expandtab shiftwidth=2
 set noendofline
 set nofixendofline
 
-"" better switching between splits
+" search settings
+set hlsearch
+set incsearch
+
+" better switching between splits
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-h> <C-w>h
