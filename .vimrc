@@ -11,6 +11,8 @@ set nofixendofline
 " search settings
 set hlsearch
 set incsearch
+" clear hlsearch
+:nnoremap <Leader><Enter> :noh<Cr> 
 
 " better switching between splits
 map <C-j> <C-w>j
