@@ -8,6 +8,10 @@ set ruler tabstop=2 expandtab shiftwidth=2
 set noendofline
 set nofixendofline
 
+" set leader and localleader explicitly
+:let mapleader = "\\"
+:let maplocalleader = ","
+
 " search settings
 set hlsearch
 set incsearch
